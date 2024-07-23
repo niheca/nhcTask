@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-slim
+ARG JAR_FILE=target/nihecaTask-1.0.jar
+COPY ${JAR_FILE} app_nihecatask.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app_nihecatask.jar"]
